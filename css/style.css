@@ -98,6 +98,22 @@ table {
     opacity: 1;
     transform: translate3d(0, 0, 0); } }
 
+@keyframes flipInX {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0; }
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in; }
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1; }
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg); }
+  to {
+    transform: perspective(400px); } }
+
 html {
   font-size: 20px; }
 
@@ -163,7 +179,7 @@ html {
           .header .navbar .menu .menu__element .menu__button:active {
             background-color: #e2e8e8; }
           .header .navbar .menu .menu__element .menu__button .menu__icon {
-            margin: auto; }
+            margin: 0 auto; }
     .header .navbar .hamburger-menu {
       width: 300px;
       height: 0;
@@ -263,7 +279,8 @@ html {
         font-weight: 400;
         text-transform: uppercase;
         line-height: 1.5rem;
-        letter-spacing: 0.17rem; }
+        letter-spacing: 0.17rem;
+        animation: flipInX 5s; }
         .main .content .content__text-holder .content__description::after {
           content: "";
           position: absolute;
@@ -334,6 +351,22 @@ html {
     opacity: 1;
     transform: translate3d(0, 0, 0); } }
 
+@keyframes flipInX {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0; }
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in; }
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1; }
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg); }
+  to {
+    transform: perspective(400px); } }
+
 @media screen and (min-width: 320px) and (max-width: 400px) {
   html {
     font-size: 5px; }
@@ -362,6 +395,8 @@ html {
           text-align: center;
           height: 35px;
           line-height: 35px; }
+          .header .navbar .hamburger-menu .hamburger-menu__element .hamburger-menu__link {
+            padding: 10px 60px; }
           .header .navbar .hamburger-menu .hamburger-menu__element.hamburger-menu__element--mobile {
             display: block; }
     .header .logo {

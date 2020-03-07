@@ -38,6 +38,9 @@
           text-align: center;
           height: 35px;
           line-height: 35px;
+           .hamburger-menu__link{
+            padding: 10px 60px;
+          }
           &.hamburger-menu__element--mobile {
             display: block;
           }
@@ -63,7 +66,6 @@
 
     .socialmedia {
       width: auto;
-
       flex-direction: row;
       .socialmedia__link {
         margin-right: 3.5rem;
@@ -97,7 +99,6 @@
     }
   }
 
-
   .info {
     position: static;
     width: 100%;
@@ -117,7 +118,6 @@
         transform: none;
         transition: none;
       }
-  }
-  }
-  
+    }
+  } 
 }
