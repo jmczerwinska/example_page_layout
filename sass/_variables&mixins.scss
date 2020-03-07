@@ -1,0 +1,67 @@
+//@colors variable
+$color1: #ffffff;
+$color2: #e2e8e8;
+$color3: #b4d3d3;
+$color4: #d9e7e7;
+$color5: #1a1a1d;
+
+// @mixins
+@mixin button ($width, $backgroundColor: $color1,  $height: 5.5rem, $margin: 0) {
+  height: $height;
+  width: $width;
+  background-color: $backgroundColor;
+  border: none;
+  cursor: pointer;
+}
+@mixin link {
+  color: $color5;
+  text-decoration: none;
+  font-family: nunito, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2.8px;
+}
+@mixin buttonAction ($translate){
+  &:hover {
+    transition: ease-in 0.3s;
+    transform: translateX($translate);
+  }
+  &:active {
+    transform: scale(0.94);
+  }
+}
+@mixin iconAction {
+  &:hover {
+    transition: ease-in 0.3s;
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+}
+@mixin linkAction {
+  transition: background-size .2s;
+  &:hover {
+    background: linear-gradient(to top, $color2 0%, $color1 100%) repeat-x 0 100%;
+    background-size: 4px 4px;
+    color: #000;
+    text-decoration: none;
+  }
+  &:active {
+    background-size: 4px 30px;
+  }
+}
+
+//@keyframes for animation
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

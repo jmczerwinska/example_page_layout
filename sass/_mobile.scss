@@ -1,0 +1,126 @@
+@import "variables&mixins";
+
+@media screen and(min-width: 320px) and (max-width: 400px) {
+  html {
+    font-size: 5px;
+  }
+
+  .container {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .header {
+    width: 100%;
+    .navbar {
+      .menu{
+        .menu__element {
+          &.menu__element--hidden {
+            display: none;
+            .menu__link{
+              display: none;
+            }
+          }
+        }
+      }
+      .hamburger-menu {
+        width: 100%;
+        height: 0;
+        opacity: 0;
+        border: solid 2px $color2;
+        visibility: hidden;
+        transition:  visibility .2s, height .2s, opacity .4s;
+        &.hamburger-menu--show {
+          animation: fadeInDown 1s;
+          height: auto;
+          opacity: 1;
+          visibility: visible;
+        }
+        .hamburger-menu__element{
+          text-align: center;
+          height: 35px;
+          line-height: 35px;
+          margin: 5px auto;
+          &.hamburger-menu__element--mobile {
+            display: block;
+          }
+
+          .hamburger-menu__link{
+            padding: 5px 20px;
+            @include link;
+            @include linkAction;
+          }
+          &.hamburger-menu__element--mobile {
+            display: none;
+          }
+        }
+      }
+    }
+    .logo {
+      width: 150px;
+      height: auto;
+    }
+  }
+
+  .square {
+    width: 60%;
+  }
+
+  .main {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-content: flex-end;
+    margin-top: 65px;
+
+    .socialmedia {
+      width: auto;
+
+      flex-direction: row;
+      .socialmedia__link {
+        margin-right: 3.5rem;
+      }
+    }
+    .content {
+      width: 90%;
+      max-height: 70vh;
+      min-height: 50vh;
+      .content__text-holder {
+        top: 10%;
+        .content__title {
+          width: auto;
+          margin-bottom: 4rem;
+          font-size: 7rem;
+          line-height: 7rem;
+        }
+        .content__description {
+          font-size: 3rem;
+          width: 150px;
+          line-height: 4rem;
+          &::after {
+            display: none;
+          }
+        }
+      }
+      .content__photo {
+        width: 80%;
+        max-height: 70vh;
+      }
+    }
+  }
+
+
+  .info {
+    position: static;
+    width: 100%;
+    flex-grow: 1;
+    .info__button--profile {
+      width: 70%;
+      height: 100%;
+    }
+  }
+  .info__button--facebook {
+    width: 30%;
+    height: 100%;
+  }
+}
