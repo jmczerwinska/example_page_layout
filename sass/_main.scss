@@ -41,13 +41,13 @@ html {
           padding: 5px 2px;
           line-height: 1.5rem;
           @include link;
-          @include linkAction;
+          @include linkAction($color3, $color1);
         }
         .menu__button {
           margin-left: 1px;
           @include button(29px, $color1, 30px, interherit);
           &:focus, &:hover {
-            outline-color: $color2;
+            outline-color: $color3;
           }
           &:active{
             background-color: $color2;
@@ -59,28 +59,27 @@ html {
       }
     }
     .hamburger-menu {
-      width: 100%;
+      width: 300px;
       height: 0;
       opacity: 0;
-      border: solid 2px $color2;
+      background-color: $color3;
       visibility: hidden;
-      transition:  visibility .2s, height .2s, opacity .4s;
       &.hamburger-menu--show {
-        animation: fadeInDown 1s;
+        animation: fadeInDown 0.5s;
         height: auto;
         opacity: 1;
         visibility: visible;
       }
       .hamburger-menu__element{
         text-align: center;
-        height: 35px;
-        line-height: 35px;
+        height: 80px;
+        line-height: 80px;
         margin: 5px auto;
 
         .hamburger-menu__link{
           padding: 5px 20px;
           @include link;
-          @include linkAction;
+          @include linkAction($color1, $color3);
         }
         &.hamburger-menu__element--mobile {
           display: none;

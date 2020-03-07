@@ -145,7 +145,7 @@ html {
           letter-spacing: 2.8px;
           transition: background-size .2s; }
           .header .navbar .menu .menu__element .menu__link:hover {
-            background: linear-gradient(to top, #e2e8e8 0%, #ffffff 100%) repeat-x 0 100%;
+            background: linear-gradient(to top, #b4d3d3 0%, #ffffff 100%) repeat-x 0 100%;
             background-size: 4px 4px;
             color: #000;
             text-decoration: none; }
@@ -159,27 +159,26 @@ html {
           border: none;
           cursor: pointer; }
           .header .navbar .menu .menu__element .menu__button:focus, .header .navbar .menu .menu__element .menu__button:hover {
-            outline-color: #e2e8e8; }
+            outline-color: #b4d3d3; }
           .header .navbar .menu .menu__element .menu__button:active {
             background-color: #e2e8e8; }
           .header .navbar .menu .menu__element .menu__button .menu__icon {
             margin: auto; }
     .header .navbar .hamburger-menu {
-      width: 100%;
+      width: 300px;
       height: 0;
       opacity: 0;
-      border: solid 2px #e2e8e8;
-      visibility: hidden;
-      transition: visibility .2s, height .2s, opacity .4s; }
+      background-color: #b4d3d3;
+      visibility: hidden; }
       .header .navbar .hamburger-menu.hamburger-menu--show {
-        animation: fadeInDown 1s;
+        animation: fadeInDown 0.5s;
         height: auto;
         opacity: 1;
         visibility: visible; }
       .header .navbar .hamburger-menu .hamburger-menu__element {
         text-align: center;
-        height: 35px;
-        line-height: 35px;
+        height: 80px;
+        line-height: 80px;
         margin: 5px auto; }
         .header .navbar .hamburger-menu .hamburger-menu__element .hamburger-menu__link {
           padding: 5px 20px;
@@ -192,7 +191,7 @@ html {
           letter-spacing: 2.8px;
           transition: background-size .2s; }
           .header .navbar .hamburger-menu .hamburger-menu__element .hamburger-menu__link:hover {
-            background: linear-gradient(to top, #e2e8e8 0%, #ffffff 100%) repeat-x 0 100%;
+            background: linear-gradient(to top, #ffffff 0%, #b4d3d3 100%) repeat-x 0 100%;
             background-size: 4px 4px;
             color: #000;
             text-decoration: none; }
@@ -342,48 +341,28 @@ html {
     height: 100vh; }
   .header {
     width: 100%; }
-    .header .navbar .menu .menu__element.menu__element--hidden {
-      display: none; }
-      .header .navbar .menu .menu__element.menu__element--hidden .menu__link {
-        display: none; }
-    .header .navbar .hamburger-menu {
-      width: 100%;
-      height: 0;
-      opacity: 0;
-      border: solid 2px #e2e8e8;
-      visibility: hidden;
-      transition: visibility .2s, height .2s, opacity .4s; }
-      .header .navbar .hamburger-menu.hamburger-menu--show {
-        animation: fadeInDown 1s;
-        height: auto;
-        opacity: 1;
-        visibility: visible; }
-      .header .navbar .hamburger-menu .hamburger-menu__element {
-        text-align: center;
-        height: 35px;
-        line-height: 35px;
-        margin: 5px auto; }
-        .header .navbar .hamburger-menu .hamburger-menu__element.hamburger-menu__element--mobile {
-          display: block; }
-        .header .navbar .hamburger-menu .hamburger-menu__element .hamburger-menu__link {
-          padding: 5px 20px;
-          color: #1a1a1d;
-          text-decoration: none;
-          font-family: nunito, sans-serif;
-          font-size: 14px;
-          font-weight: 400;
-          text-transform: uppercase;
-          letter-spacing: 2.8px;
-          transition: background-size .2s; }
-          .header .navbar .hamburger-menu .hamburger-menu__element .hamburger-menu__link:hover {
-            background: linear-gradient(to top, #e2e8e8 0%, #ffffff 100%) repeat-x 0 100%;
-            background-size: 4px 4px;
-            color: #000;
-            text-decoration: none; }
-          .header .navbar .hamburger-menu .hamburger-menu__element .hamburger-menu__link:active {
-            background-size: 4px 30px; }
-        .header .navbar .hamburger-menu .hamburger-menu__element.hamburger-menu__element--mobile {
+    .header .navbar {
+      margin: 0; }
+      .header .navbar .menu {
+        margin: auto 3rem; }
+        .header .navbar .menu .menu__element.menu__element--hidden {
           display: none; }
+          .header .navbar .menu .menu__element.menu__element--hidden .menu__link {
+            display: none; }
+      .header .navbar .hamburger-menu {
+        width: 100vw;
+        margin: 0; }
+        .header .navbar .hamburger-menu.hamburger-menu--show {
+          animation: fadeInDown 1s;
+          height: auto;
+          opacity: 1;
+          visibility: visible; }
+        .header .navbar .hamburger-menu .hamburger-menu__element {
+          text-align: center;
+          height: 35px;
+          line-height: 35px; }
+          .header .navbar .hamburger-menu .hamburger-menu__element.hamburger-menu__element--mobile {
+            display: block; }
     .header .logo {
       width: 150px;
       height: auto; }

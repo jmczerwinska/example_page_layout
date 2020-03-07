@@ -40,10 +40,10 @@ $color5: #1a1a1d;
     transform: scale(0.9);
   }
 }
-@mixin linkAction {
+@mixin linkAction ($startColor, $endColor) {
   transition: background-size .2s;
   &:hover {
-    background: linear-gradient(to top, $color2 0%, $color1 100%) repeat-x 0 100%;
+    background: linear-gradient(to top, $startColor 0%, $endColor 100%) repeat-x 0 100%;
     background-size: 4px 4px;
     color: #000;
     text-decoration: none;
