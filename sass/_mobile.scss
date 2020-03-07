@@ -105,10 +105,19 @@
     .info__button--profile {
       width: 70%;
       height: 100%;
+      &:hover {
+        transform: none;
+        transition: none;
+      }
     }
-  }
-  .info__button--facebook {
+    .info__button--facebook {
     width: 30%;
     height: 100%;
+     &:hover {
+        transform: none;
+        transition: none;
+      }
   }
+  }
+  
 }

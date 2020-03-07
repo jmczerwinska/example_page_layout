@@ -134,7 +134,7 @@ html {
         height: 30px;
         margin: 0 2.5rem 0.75rem 0; }
         .header .navbar .menu .menu__element .menu__link {
-          padding: 5px 2px;
+          padding: 5px 5px;
           line-height: 1.5rem;
           color: #1a1a1d;
           text-decoration: none;
@@ -323,7 +323,8 @@ html {
     transform: scale(0.94); }
   .info__button--facebook .info__facebook-icon {
     width: 35px;
-    height: 36px; }
+    height: 36px;
+    margin: auto; }
 
 @keyframes fadeInDown {
   from {
@@ -406,6 +407,12 @@ html {
     .info .info__button--profile {
       width: 70%;
       height: 100%; }
-  .info__button--facebook {
-    width: 30%;
-    height: 100%; } }
+      .info .info__button--profile:hover {
+        transform: none;
+        transition: none; }
+    .info .info__button--facebook {
+      width: 30%;
+      height: 100%; }
+      .info .info__button--facebook:hover {
+        transform: none;
+        transition: none; } }
